@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/widgets.dart';
 
-class DiscoverScreen extends StatelessWidget {
-  const DiscoverScreen({Key? key}) : super(key: key);
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/discover';
+  static const routeName = '/profile';
 
   static Route route<T>() {
     return MaterialPageRoute(
-      builder: (_) => const DiscoverScreen(),
+      builder: (_) => const ProfileScreen(),
       settings: const RouteSettings(name: routeName),
     );
   }
@@ -17,8 +17,10 @@ class DiscoverScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      bottomNavigationBar: const BottomBar(index: 1),
-      body: Container(),
+      bottomNavigationBar: const BottomBar(index: 2),
+      body: const Center(
+        child: Text('ProfileScreen'),
+      ),
     );
   }
 }
