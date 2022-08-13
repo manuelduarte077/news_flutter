@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
+import 'package:news_app/screens/article_screen.dart';
 import 'package:news_app/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -83,38 +84,49 @@ class _BreakingNews extends StatelessWidget {
                 return Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   margin: const EdgeInsets.only(right: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ImageContainer(
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        imageUrl: articles[index].imageUrl,
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        articles[index].title,
-                        maxLines: 2,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge!
-                            .copyWith(fontWeight: FontWeight.bold, height: 1.5),
-                      ),
-                      const SizedBox(height: 5),
-                      Text(
-                        '${DateTime.now().difference(articles[index].createAt).inHours} hours ago',
-                        maxLines: 2,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge!
-                            .copyWith(fontWeight: FontWeight.bold, height: 1.5),
-                      ),
-                      const SizedBox(height: 5),
-                      Text(
-                        'by ${articles[index].author}',
-                        maxLines: 2,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                    ],
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        ArticleScreen.routeName,
+                        arguments: articles[index],
+                      );
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ImageContainer(
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          imageUrl: articles[index].imageUrl,
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          articles[index].title,
+                          maxLines: 2,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          '${DateTime.now().difference(articles[index].createAt).inHours} hours ago',
+                          maxLines: 2,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          'by ${articles[index].author}',
+                          maxLines: 2,
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },

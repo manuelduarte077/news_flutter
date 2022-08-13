@@ -9,6 +9,9 @@ class AppRouter {
       case '/discover':
         return DiscoverScreen.route();
 
+      case '/article':
+        return ArticleScreen.route();
+
       case '/profile':
         return ProfileScreen.route();
 

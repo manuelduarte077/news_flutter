@@ -11,8 +11,11 @@ class ArticleScreen extends StatelessWidget {
       settings: const RouteSettings(name: routeName),
     );
   }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: const [Text('Article Details')],
+    );
   }
 }
