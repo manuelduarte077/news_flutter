@@ -66,7 +66,7 @@ class Article extends Equatable {
       category: 'bussines',
       views: 1204,
       imageUrl:
-          'https://cdn.vox-cdn.com/thumbor/sP9sPjh-2PfK76HRsOfHNYNQWAo=/0x285:4048x2404/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23761862/1235927096.jpg',
+          'https://cdn.vox-cdn.com/thumbor/sP9sPjh-2PfK76HRsOfHNYNQWAo=/0x285:4048x2404/fit-kin/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23761862/1235927096.jpg',
       body:
           'Miners voluntarily powered down as energy demand and prices spiked \r\nAn aerial view of the Whinstone US Bitcoin mining facility in Rockdale, Texas, on October 9th, 2021. The long sheds at North Ameri… [+3770 chars]',
       createAt: DateTime.now().subtract(const Duration(hours: 5)),
