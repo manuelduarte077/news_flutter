@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/config/routes.dart';
-import 'package:news_app/screens/screens.dart';
+import 'package:news_app/routing/routes.dart';
+
+import '../features/home/home_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

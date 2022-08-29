@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
-import 'package:news_app/widgets/widgets.dart';
+import 'package:news_app/common_widgets/widgets.dart';
 
 class ArticleScreen extends StatelessWidget {
   const ArticleScreen({Key? key, required this.article}) : super(key: key);

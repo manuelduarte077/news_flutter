@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/screens/screens.dart';
+
+import '../features/discover/presentation/discover_screen.dart';
+import '../features/home/home_screen.dart';
+import '../features/account/presentation/profile_screen.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({Key? key, required this.index}) : super(key: key);
 
   final int index;
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(

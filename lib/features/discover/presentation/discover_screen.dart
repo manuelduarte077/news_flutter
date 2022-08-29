@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
-import 'package:news_app/screens/screens.dart';
-import 'package:news_app/widgets/widgets.dart';
+import 'package:news_app/common_widgets/widgets.dart';
+
+import '../../articles/presentation/article_screen.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
@@ -54,6 +55,7 @@ class _CategoryNews extends StatelessWidget {
   }) : super(key: key);
 
   final List<String> tabs;
+
   @override
   Widget build(BuildContext context) {
     final articles = Article.articles;
