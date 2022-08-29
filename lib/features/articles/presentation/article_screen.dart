@@ -5,15 +5,6 @@ import 'package:news_app/common_widgets/widgets.dart';
 class ArticleScreen extends StatelessWidget {
   const ArticleScreen({Key? key, required this.article}) : super(key: key);
 
-  static const routeName = '/article';
-
-  static Route route<T>({required Article article}) {
-    return MaterialPageRoute(
-      settings: const RouteSettings(name: routeName),
-      builder: (_) => ArticleScreen(article: article),
-    );
-  }
-
   final Article article;
 
   @override

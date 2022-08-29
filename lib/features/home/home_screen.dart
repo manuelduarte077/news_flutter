@@ -2,19 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:news_app/common_widgets/widgets.dart';
 import 'package:news_app/models/article_model.dart';
-import 'package:news_app/features/articles/presentation/article_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
-  static const routeName = '/';
-
-  static Route route<T>() {
-    return MaterialPageRoute(
-      builder: (_) => const HomeScreen(),
-      settings: const RouteSettings(name: routeName),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,13 +76,7 @@ class _BreakingNews extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.5,
                   margin: const EdgeInsets.only(right: 10),
                   child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        ArticleScreen.routeName,
-                        arguments: articles[index],
-                      );
-                    },
+                    onTap: () {},
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

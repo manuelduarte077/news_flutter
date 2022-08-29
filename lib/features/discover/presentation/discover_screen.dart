@@ -2,19 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 import 'package:news_app/common_widgets/widgets.dart';
 
-import '../../articles/presentation/article_screen.dart';
-
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
-
-  static const routeName = '/discover';
-
-  static Route route<T>() {
-    return MaterialPageRoute(
-      builder: (_) => const DiscoverScreen(),
-      settings: const RouteSettings(name: routeName),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,13 +78,7 @@ class _CategoryNews extends StatelessWidget {
                     itemCount: articles.length,
                     itemBuilder: ((context, index) {
                       return InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            ArticleScreen.routeName,
-                            arguments: articles[index],
-                          );
-                        },
+                        onTap: () {},
                         child: Row(
                           children: [
                             ImageContainer(

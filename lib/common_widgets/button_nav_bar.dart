@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../features/discover/presentation/discover_screen.dart';
-import '../features/home/home_screen.dart';
 import '../features/account/presentation/profile_screen.dart';
 
 class BottomBar extends StatelessWidget {
@@ -22,9 +20,7 @@ class BottomBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, HomeScreen.routeName);
-              },
+              onPressed: () {},
               icon: const Icon(Icons.home),
             ),
           ),
@@ -34,9 +30,7 @@ class BottomBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, DiscoverScreen.routeName);
-              },
+              onPressed: () {},
               icon: const Icon(Icons.search_sharp),
             ),
           ),
@@ -46,9 +40,7 @@ class BottomBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, ProfileScreen.routeName);
-              },
+              onPressed: () {},
               icon: const Icon(Icons.person_outline_sharp),
             ),
           ),
