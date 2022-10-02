@@ -1,6 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-
-import '../features/account/presentation/profile_screen.dart';
+import 'package:news_app/routes/router.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({Key? key, required this.index}) : super(key: key);
@@ -20,7 +20,9 @@ class BottomBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: () {},
+              /// AppRouter is a class that handles navigation
+
+              onPressed: () => context.router.push(const HomeScreenRoute()),
               icon: const Icon(Icons.home),
             ),
           ),
@@ -30,8 +32,10 @@ class BottomBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search_sharp),
+              onPressed: () => context.router.push(const DiscoverRouter()),
+              icon: const Icon(
+                Icons.search_sharp,
+              ),
             ),
           ),
           label: 'Search',
@@ -40,7 +44,7 @@ class BottomBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () => context.router.push(const ProfileRouter()),
               icon: const Icon(Icons.person_outline_sharp),
             ),
           ),
