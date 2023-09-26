@@ -144,9 +144,7 @@ class _CategoryNews extends StatelessWidget {
 }
 
 class _DiscoverNews extends StatelessWidget {
-  const _DiscoverNews({
-    Key? key,
-  }) : super(key: key);
+  const _DiscoverNews({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -160,7 +158,7 @@ class _DiscoverNews extends StatelessWidget {
             'Discover',
             style: Theme.of(context)
                 .textTheme
-                .headline4!
+                .bodyLarge!
                 .copyWith(color: Colors.black, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 5),
